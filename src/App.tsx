@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 
+import GlobalStyles from 'global/styles'
+import { ThemeProvider } from 'styled-components'
 import themeStyles from 'global/theme'
 import { useTheme } from 'hooks'
 
@@ -18,7 +20,12 @@ function App() {
   
   
   return (
-    null
+    <Fragment>
+      <GlobalStyles />
+      <ThemeProvider theme={currentThemeStyles}>
+        
+      </ThemeProvider>
+    </Fragment>
   )
 }
 
