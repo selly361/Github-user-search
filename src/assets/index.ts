@@ -1,0 +1,7 @@
+export { ReactComponent as CompanyIcon } from "./icon-company.svg"
+export { ReactComponent as LocationIcon } from "./icon-location.svg"
+export { ReactComponent as MoonIcon } from "./icon-moon.svg"
+export { ReactComponent as SearchIcon } from "./icon-searh.svg"
+export { ReactComponent as SunIcon } from "./icon-sun.svg"
+export { ReactComponent as TwitterIcon } from "./icon-twitter.svg"
+export { ReactComponent as WebsiteIcon } from "./icon-website.svg"
