@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
 
 * {
   transition: all 0.2s ease-in-out;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Space Mono', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
@@ -37,10 +37,11 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
+   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.bg};
+  background-color: ${(props) => props.theme.bg};
   min-height: 100vh;
   padding: 75px 96px;
 }
@@ -118,5 +119,4 @@ a:focus {
 
 `;
 
-
-export default GlobalStyles
+export default GlobalStyles;
