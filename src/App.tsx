@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react'
 
 import GlobalStyles from 'global/styles'
+import { Header } from 'components'
 import { ThemeProvider } from 'styled-components'
 import themeStyles from 'global/theme'
 import { useTheme } from 'hooks'
@@ -23,7 +24,7 @@ function App() {
     <Fragment>
       <GlobalStyles />
       <ThemeProvider theme={currentThemeStyles}>
-        
+        <Header toggleTheme={toggleTheme} icon={currentThemeStyles.icon} />
       </ThemeProvider>
     </Fragment>
   )
