@@ -18,7 +18,7 @@ export const ThemeSwitchContainer = styled.button`
     gap: 1rem;
     align-items: center;
 
-    &:hover > h6 {
+    &:hover > h2 {
         color: ${props => props.theme.themeButtonHover};
     }
 
@@ -28,6 +28,6 @@ export const ThemeSwitchContainer = styled.button`
 `
 
 
-export const ThemeText = styled.h6`
+export const ThemeText = styled.h2`
     color: ${props => props.theme.textLowContrast};
 `
