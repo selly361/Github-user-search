@@ -2,7 +2,7 @@ import { MoonIcon, SunIcon } from "assets";
 
 const theme = {
   light: {
-    icon: <SunIcon />,
+    icon: <MoonIcon />,
     primary: "#0079ff",
     primaryHover: "#60abff",
     textHighContrast: "#2b3442",
@@ -15,7 +15,7 @@ const theme = {
   },
 
   dark: {
-    icon: <MoonIcon />,
+    icon: <SunIcon />,
     primary: "#0079ff",
     primaryHover: "#60abff",
     textHighContrast: "#fff",
