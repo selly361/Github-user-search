@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
   font-size: 16px;
 
   /* Typography */
+  
   --h1: 1.625rem;
   --h1-lh: 38px;
 
@@ -36,14 +37,15 @@ const GlobalStyles = createGlobalStyle`
   --body-s-lh: 18px;
 }
 
-body {
-   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${(props) => props.theme.bg};
+body, #root {
+  width: 100vw;
   min-height: 100vh;
-  padding: 75px 96px;
+  background-color: ${(props) => props.theme.bg};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  gap: 20px;
 }
 
 
@@ -72,11 +74,15 @@ h4 {
 }
 
 
-button {
-  cursor: pointer;
+button, fieldset {
   outline: none;
   background: none;
   border: none;
+}
+
+button {
+  cursor: pointer;
+
 }
 
 input {
@@ -88,22 +94,25 @@ input {
 
 
 @media (max-width: 650px) {
+  
   :root {
-    /* Typography */
-    --h1: 1rem;
-    --h1-lh: 24px;
+    
+  /* Typography */
+    
+  --h1: 1rem;
+  --h1-lh: 24px;
 
-    --h2: 1rem;
-    --h2-lh: 24px;
+  --h2: 1rem;
+  --h2-lh: 24px;
 
-    --h3: 0.813rem;
-    --h3-lh: 19px;
+  --h3: 0.813rem;
+  --h3-lh: 19px;
 
-    --h4: 0.688rem;
-    --h4-lh: 16px;
+  --h4: 0.688rem;
+  --h4-lh: 16px;
 
-    --body: 0.813rem;
-    --body-lh: 25px;
+  --body: 0.813rem;
+  --body-lh: 25px;
   }
 
   body {
