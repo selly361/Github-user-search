@@ -8,7 +8,7 @@ function Header({ toggleTheme, icon, theme }: IHeaderProps) {
     <StyledHeader>
         <Title>DevFinder</Title>
         <ThemeSwitchContainer onClick={toggleTheme}>
-            <ThemeText>{theme}</ThemeText>
+            <ThemeText>{theme == "light" ? "dark" : "light"}</ThemeText>
             {icon}
         </ThemeSwitchContainer>
     </StyledHeader>

@@ -85,11 +85,6 @@ input {
   outline: none;
 }
 
-button:focus,
-input:focus,
-a:focus {
-  outline: dotted #697c9a 1.75px;
-}
 
 
 @media (max-width: 650px) {
