@@ -1,4 +1,4 @@
-import { Header, SearchField } from "components";
+import { Header, Main, SearchField } from "components";
 import React, { Fragment, useState } from "react";
 import { useFetch, useTheme } from "hooks";
 
@@ -17,6 +17,9 @@ function App() {
 
   const toggleTheme = () => setTheme(theme == "light" ? "dark" : "light");
 
+
+  
+
   return (
     <ThemeProvider theme={currentThemeStyles}>
       <GlobalStyles />
@@ -31,6 +34,7 @@ function App() {
         setQuery={setQuery}
         error={error}
       />
+      <Main user={user} />
     </ThemeProvider>
   );
 }
