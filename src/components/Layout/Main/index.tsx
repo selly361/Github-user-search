@@ -1,9 +1,15 @@
+import { ProfileImage, StyledMain } from './Main.styles'
+
+import { GithubUser } from "types/github-data"
+import { IMainProps } from "types/main"
 import React from 'react'
 
-function index() {
+function Main({ user }: IMainProps) {
   return (
-    <div>index</div>
+    <StyledMain>
+      <ProfileImage src={user?.avatar_url} />
+    </StyledMain>
   )
 }
 
-export default index
+export default Main

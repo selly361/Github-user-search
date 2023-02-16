@@ -38,5 +38,6 @@ export const SearchButton = styled.button`
 
 export const ErrorMessage = styled.p`
   color: #f74646;
-  width: 20%;
+  min-width: max-content;
+  padding: 0 5px;
 `;

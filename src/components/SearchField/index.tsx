@@ -14,6 +14,9 @@ function SearchField({ query, setQuery, error, fetchData }: ISearchFieldProps) {
     <StyledSearchField>
       <SearchIcon />
       <StyledInput
+        onKeyPress={(e) => {
+          if(e.key == "Enter") fetchData(query);
+        }}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search a Github Username..."

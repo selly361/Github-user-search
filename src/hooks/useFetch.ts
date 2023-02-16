@@ -32,7 +32,7 @@ export const useFetch = (query: string = "selly361") => {
   };
 
   useEffect(() => {
-    if(!query) fetchData("selly361");
+    fetchData("selly361");
   }, []);
 
   return { user, loading, error, fetchData };
