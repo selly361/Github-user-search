@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 
 * {
-  transition: all 0.2s ease-in-out;
   font-family: 'Space Mono', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
@@ -46,6 +45,7 @@ body, #root {
   justify-content: center;
   flex-flow: column;
   gap: 20px;
+  overflow-x: hidden;
 }
 
 
