@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-import { GithubUser } from "types/github-data";
+import { GitHubUser } from "types/github-data";
 import axios from "axios";
 
 const api = "https://api.github.com/users/";
 
 export const useFetch = (query: string = "selly361") => {
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState<GithubUser | null>(null);
+  const [user, setUser] = useState<GitHubUser | null>(null);
   const [error, setError] = useState<string>("");
 
   const fetchData = async (query: string) => {

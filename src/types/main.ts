@@ -1,5 +1,5 @@
-import { GithubUser } from "./github-data";
+import { GitHubUser } from "./github-data";
 
 export interface IMainProps {
-    user: GithubUser | null;
+    user: GitHubUser | null;
 }
