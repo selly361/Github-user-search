@@ -86,11 +86,21 @@ export const UserBio = styled.p`
 
 export const UserLocation = styled.span`
   color: ${(props) => props.theme.textMidContrast};
+
+
+  
+  &.unavailable {
+    opacity: .75;
+  }
 `;
 
 
 export const UserLink = styled.a`
   color: ${(props) => props.theme.textMidContrast};
+
+  &.unavailable {
+    opacity: .75;
+  }
 `;
 
 export const LinkContainer = styled.div`

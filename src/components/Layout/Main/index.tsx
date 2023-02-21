@@ -25,15 +25,22 @@ function Main({ user }: IMainProps) {
   const name = user?.name ? user.name : user?.login;
 
   const joinedDate = new Date(user?.created_at ? user.created_at : "");
-  const formattedDate = joinedDate.toLocaleDateString("en-US", {
+  const formattedDate = joinedDate.toLocaleDateString("en-UK", {
     year: "numeric",
     month: "short",
     day: "numeric",
   });
   const joined = `Joined ${formattedDate}`;
 
+  const location = user?.location ? user.location : "Not Available";
 
-  const bio = user?.bio ? user.bio : "This profile has no bio"
+  const twitter_username = user?.twitter_username
+    ? user.twitter_username
+    : "Not Available";
+
+  const company = user?.company ? user.company : "Not Available";
+
+  const bio = user?.bio ? user.bio : "This profile has no bio";
 
   return (
     <StyledMain>
@@ -44,7 +51,7 @@ function Main({ user }: IMainProps) {
           <Joined>{joined}</Joined>
           <Username>@{user?.login}</Username>
         </TopSection>
-        <UserBio className={!user?.bio ? "no-bio" : ''}>{bio}</UserBio>
+        <UserBio className={!user?.bio ? "no-bio" : ""}>{bio}</UserBio>
         <UserStatsContainer>
           <UserStat>
             <StatLabel>Repos</StatLabel>
@@ -64,11 +71,15 @@ function Main({ user }: IMainProps) {
         <BottomSection>
           <LinkContainer>
             <LocationIcon />
-            <UserLocation>{user?.location}</UserLocation>
+            <UserLocation className={!user?.location ? "unavailable" : ""}>
+              {location}
+            </UserLocation>
           </LinkContainer>
           <LinkContainer>
             <TwitterIcon />
-            <UserLink>{user?.twitter_username}</UserLink>
+            <UserLink className={!user?.twitter_username ? "unavailable" : ""}>
+              {twitter_username}
+            </UserLink>
           </LinkContainer>
           <LinkContainer>
             <WebsiteIcon />
@@ -76,7 +87,9 @@ function Main({ user }: IMainProps) {
           </LinkContainer>
           <LinkContainer>
             <CompanyIcon />
-            <UserLink>{user?.company}</UserLink>
+            <UserLink className={!user?.company ? "unavailable" : ""}>
+              {company}
+            </UserLink>
           </LinkContainer>
         </BottomSection>
       </StyledArticle>
